@@ -114,7 +114,7 @@ if process_button:
                 filtered_all[cols_a]
             ], ignore_index=True)
             log(f"Final data shape: {final.shape}")
-            st.dataframe(final, height=250)
+            st.dataframe(final, height=250, hide_index=True)
             # Provide download
             csv_bytes = final.to_csv(index=False).encode('utf-8')
             st.success("Processing complete!")
