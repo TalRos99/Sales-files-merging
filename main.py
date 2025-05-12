@@ -128,4 +128,4 @@ if process_button:
         log(f"Error occurred: {e}")
         st.error(f"An error occurred: {e}")
     finally:
-        status_placeholder.info("Ready")
+        status_placeholder = st.empty()
