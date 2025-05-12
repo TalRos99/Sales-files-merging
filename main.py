@@ -121,8 +121,8 @@ if process_button:
             st.download_button(
                 label="Download CSV",
                 data=csv_bytes,
-                file_name=st.session_state.output_file_name,
-                mime="text/csv"
+                file_name=f"{st.session_state.output_file_name}.csv",
+                mime="csv"
             )
     except Exception as e:
         log(f"Error occurred: {e}")
