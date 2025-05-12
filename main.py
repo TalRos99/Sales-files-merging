@@ -121,7 +121,7 @@ if process_button:
             st.download_button(
                 label="Download CSV",
                 data=csv_bytes,
-                file_name=output_filename,
+                file_name=st.session_state.output_file_name,
                 mime="text/csv"
             )
     except Exception as e:
