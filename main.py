@@ -5,6 +5,9 @@ import time
 # Configuration
 pd.options.mode.copy_on_write = True
 
+if "output_file_name" not in st.session_state:
+    st.session_state.output_file_name = f"Final Keyword File {int(time.time())}.csv"
+
 # Page setup
 st.set_page_config(page_title="Keyword Processor", layout="wide")
 st.title("Keyword Processor")
@@ -19,7 +22,7 @@ all_files = st.sidebar.file_uploader(
 )
 
 output_filename = st.sidebar.text_input(
-    "Output Filename", value=f"final_keyword_file_{int(time.time())}.csv"
+    "Output Filename", key="output_file_name"
 )
 
 process_button = st.sidebar.button("Process Files")
