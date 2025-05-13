@@ -6,7 +6,7 @@ import time
 pd.options.mode.copy_on_write = True
 
 if "output_file_name" not in st.session_state:
-    st.session_state.output_file_name = f"Final Keyword File {int(time.time())}"
+    st.session_state.output_file_name = f"<Final Keyword File Name>"
 
 # Page setup
 st.set_page_config(page_title="Keyword Processor", layout="wide")
