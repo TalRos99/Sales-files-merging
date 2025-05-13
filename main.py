@@ -61,7 +61,6 @@ def remove_target_from_all(target_df, all_df):
     return filtered
 
 # Display initial log
-log_placeholder.text(default_log)
 status_placeholder.info(default_log)
 
 # Processing logic
